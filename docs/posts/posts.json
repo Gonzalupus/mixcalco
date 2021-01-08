@@ -1,8 +1,8 @@
 [
   {
     "path": "posts/welcome/",
-    "title": "Salto de fe o *chinguesu*: de cómo transicioné de Windows a Linux ",
-    "description": "*Mixcalco* o el lugar de la casa de las nubes pretende ser un repositorio de mis experiencias, ideas, y herramientas que vaya encontrando por ahí.",
+    "title": "Salto de fe o 'chinguesu': de cómo transicioné de Windows a Linux",
+    "description": {},
     "author": [
       {
         "name": "Gonzalo Martínez",
@@ -13,7 +13,7 @@
     "categories": [],
     "contents": "\n¿Cuántas veces no has estado al borde del colapso nervioso porque windows se tarda años en abrir un programa, porque quiere actualizarse justo cuando ya te vas a dormir, o simplemente porque instala y reinstala programas que no quieres (coff coff Edge coff coff)? Como uno de las millones de personas fastidiadas por estos y otros problemas con Windows es que decidí perder el miedo y adentrarme al mundo de Linux. En este pequeño artículo hablaré de lo siguiente: los problemas más recurrentes que he tuve con Windows10; cómo ha sido mi experiencia con Linux hasta este momento; y mis recomendaciones y fuentes por si estás interesadx en (por fin) dejar de usar Windows.\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-01-07T22:36:11-06:00",
+    "last_modified": "2021-01-07T22:45:50-06:00",
     "input_file": "welcome.utf8.md"
   }
 ]

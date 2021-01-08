@@ -1,7 +1,6 @@
 ---
-title: "Salto de fe o *chinguesu*: de cómo transicioné de Windows a Linux "
+title: "Salto de fe o 'chinguesu': de cómo transicioné de Windows a Linux"
 description: |
-  *Mixcalco* o el lugar de la casa de las nubes pretende ser un repositorio de mis experiencias, ideas, y herramientas que vaya encontrando por ahí.
 author:
   - name: Gonzalo Martínez 
 date: 01-07-2021
