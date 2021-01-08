@@ -1,7 +1,5 @@
 name: "Mixcalco"
-title: "Mixcalco"
-description: |
-  Mixcalco
+title: "Publicaciones"
 output_dir: "docs"
 navbar:
   right:
