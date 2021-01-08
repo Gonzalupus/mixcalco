@@ -1,0 +1,12 @@
+name: "mixcalco"
+title: "Mixcalco"
+description: |
+  Mixcalco
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Inicio"
+      href: index.html
+    - text: "Acerca del sitio"
+      href: about.html
+output: distill::distill_article

@@ -1,0 +1,17 @@
+---
+title: "About this blog"
+description: |
+  Some additional details about the blog
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### Sobre el sitio
+
+*Mixcalco* o el lugar de la casa de las nubes es mi sitio personal en donde busco ensayar ideas a la vez que sirve de repositorio para compartir las cosas que he aprendido o herramientas que encuentre por ahí. 
+
+### Sobre mí
+
+Soy un biólogo interesado en las relaciones que tienen las personas con sus ambientes. Actualmente me encuentro estudiando mi doctorado en ciencias ambientales con una especialización en geografía en la Universidad de la Ciudad de Nueva York (CUNY). Mis intereses académicos van desde la ecología, la etnobiología, hasta la ecología política, la antropología, y la filosofía de la ciencia (aunque no sepa mucho de las últimas dos).
