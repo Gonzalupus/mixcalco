@@ -1,6 +1,5 @@
 ---
 title: "Mixcalco"
 site: distill::distill_website
-author: Gonzalo Martínez
 listing: posts
 ---
