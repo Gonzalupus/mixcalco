@@ -12,4 +12,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Sobre mí
 
-Soy un biólogo interesado en las relaciones que tienen las personas con sus ambientes. Actualmente me encuentro estudiando mi doctorado en ciencias ambientales con una especialización en geografía en la Universidad de la Ciudad de Nueva York (CUNY). Mis intereses académicos van desde la ecología, la etnobiología, hasta la ecología política, la antropología, y la filosofía de la ciencia (aunque no sepa mucho de las últimas dos).
+Soy biólogo egresado de la Universidad Nacional Autónoma de México, en donde también cursé mis estudios de maestría. Mis trabajos de investigación han sido variados. Durante el pregrado realicé en un análisis ecológico de las dinámicas poblaciones de un pastizal semiárido. En la maestría investigués sobre las percepciones del clima-tiempo de campesinos indígenas y su vínculo con la dinámicas agrícolas. Actualmente me encuentro estudiando mi doctorado en ciencias ambientales con una especialización en Geografía en la Universidad de la Ciudad de Nueva York (CUNY). Mis intereses académicos van desde la ecología y la etnobiología, hasta la ecología política, la antropología, y la filosofía de la ciencia (aunque no sepa mucho de las últimas dos).
+
+Fuera de la academica disfruto la caminatas tranquilas, disfrutar las tardes viendo las nubes. En modo activo me gusta baiar salsa y entrenar Muay Thai.
