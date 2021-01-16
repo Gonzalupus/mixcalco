@@ -1483,9 +1483,62 @@ Figure 4: Logos de las distribuciones Linux Mint, Ubuntu, y Manjaro
 <p>Mi decisión por usar Manjaro se debió a varios factores, entre los que destacan:</p>
 <ul>
 <li><p>Manjaro es una distribución construida a partir de Arch Linux, el cual no requiere demasiado recursos de la computadora lo que lo hace ideal para mi laptop de más de tres años.</p></li>
-<li><p>El sistema es amigable con usuarios nuevos en general, y se instala mediante un instalador gráfico independiente llamado Calamares que te lleva paso a paso como el Wizard de instalación en Windows. De manera similar, la instalación de programas se puede hacer a través el instalador gráfico Pamac.</p></li>
+<li><p>El sistema es amigable con usuarios nuevos en general, y se instala mediante un instalador gráfico independiente llamado Calamares que te lleva paso a paso como el Wizard de instalación en Windows. De manera similar, la instalación de programas, aplicaciones, y paquetes se puede hacer a través del instalador gráfico Pamac.</p></li>
 <li><p>Manjaro, a diferencia de varias distribuciones de Linux que sólo son mantenidas por una comunidad, tiene como finalidad convertirse en un sistema operativo profesional que le permita competir con Windows y MacOS. De hecho, los desarrolladores han logrado conseguir convenios con los fabricantes de hardware para que la integración con Manjaro sea total.</p></li>
-<li><p>De nuevo, al estar basada en Arch linux, los usuarios de Manjaro podemos echar mano de la [Wiki](<a href="https://wiki.archlinux.org/index.php/Main_page_(Espa%C3%B1ol)" class="uri">https://wiki.archlinux.org/index.php/Main_page_(Espa%C3%B1ol)</a> y de los repositorios mantenidos por la comunidad. Pero además, la comunidad en los <a href="https://forum.manjaro.org/">foros</a> es bastante amable y es fácil encontrar una solución a los problemas.</p></li>
+<li><p>De nuevo, al estar basada en Arch linux, los usuarios de Manjaro pueden echar mano de la [Wiki](<a href="https://wiki.archlinux.org/index.php/Main_page_(Espa%C3%B1ol)" class="uri">https://wiki.archlinux.org/index.php/Main_page_(Espa%C3%B1ol)</a> y de los repositorios mantenidos por la comunidad de usuarios (AUR). Además, la comunidad en los <a href="https://forum.manjaro.org/">foros</a> es bastante amable y es fácil encontrar una solución a los problemas.</p></li>
+</ul>
+<h2 id="experiencia-hasta-el-momento-y-recomendaciones">Experiencia hasta el momento y recomendaciones</h2>
+<p>Una de las primeras cosas que leí al estar buscando información sobre probar Linux fue que lo hiciera desde un ambiente confinado antes de modificar mi sistema. Las opciones que encontré fueron usar una máquina virtual o cargar el sistema operativo desde una usb. En mi caso me decidí por la segunda, y después de estar trabajando por un par de semanas así, me aventuré a instalar Manjaro en mi disco duro.</p>
+<p>Como mencioné anteriormente, uno de los problemas para los usuarios de Windows y MacOS es la portabilidad de programas como Office, Adobe Photoshop e Illustrator, o Arcmap. Para solucionar este “problema” es posible optar por sus análogos libres como LibreOffice, GIMP, Ink, y QGis, respectivamente. Otra alternativa es utilizar una maquina virtual que corra Windows o “no-emuladores” como WINE (Wine Is Not an Emulator) que te permite instalar y ejecturar algunos programas de Windows; aunque en el último caso la disponibilidad depende de si alguien más ha optimizado el programa. Una tercera opción si no quieres o no puedes dejar de usar Windows es instalar Linux en una partición del disco duro; sin embargo esto depende del espacio de tu disco.</p>
+<p>Dado que Atlas.ti, uno de los programas que empleo para análisis cualitativos, no corre en Linux y no está optimizado en Wine me decidí por instalar Linux en una nueva partición. Hacer esta partición e instalación como un usuario novato fue relativamente fácil gracias al material disponible en internet, la documentación de instalación de Manjaro, y al instalador Calamares. Para este tipo de instalación es importante seguir de cerca las instrucciones de la configuración del BIOS, ya que la configuración de Windows 10 bloquea por defecto el arranque de otros sistemas operativos.</p>
+<p>Hasta este momento mi experiencia con Manjaro ha sido más que buena; a continuación mencionaré algunos de los puntos positivos y negativos:</p>
+<h3 id="positivos">Positivos</h3>
+<ul>
+<li>Arranque y apagado: En Windows el arranque puede tomar, desde que la enciendo hasta que inicio firefox u otro programa, unos 8 minutos en promedio. En Manjaro esto tarda unos 3 a 5 minutos máximo si dejo que el GRUB (el menú de inicio de Manjaro en donde te permite elegir el sistema operativo y el núcleo de Linux a usar) en automático.</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="/run/media/gonzalo/Windows/Users/Gonzalo/Documents/Trabajos/Sitio%20web/mixcalco/grub.png" alt="En el GRUB puedes visualizar los sistemas operativos disponibles, y en el caso de Manjaro, el núcleo de Linux que quieres utilizar. Desde aquí también es posible cargar o 'bootear' algún sistema operativo desde una USB. Si sólo quieres usar Manjaro es posible configurar el arranque para que éste sea directo." width="400" />
+<p class="caption">
+Figure 5: En el GRUB puedes visualizar los sistemas operativos disponibles, y en el caso de Manjaro, el núcleo de Linux que quieres utilizar. Desde aquí también es posible cargar o ‘bootear’ algún sistema operativo desde una USB. Si sólo quieres usar Manjaro es posible configurar el arranque para que éste sea directo.
+</p>
+</div>
+</div>
+<ul>
+<li><p>Desempeño en general:</p>
+<ul>
+<li><p>La apertura de programas, transferencias de archivos entre carpetas a medios externos, asì como la carga de varios libros en Okular es instantánea.</p></li>
+<li><p>La apertura de imágenes es más rápida que el visor de fotos o Xnview en Windows.</p></li>
+<li><p>Puedo utilizar de manera fluida un dock (latte dock) y efectos de transparencias sin entorpecer la respuesta del sistema; algo impensable en Windows.</p></li>
+</ul></li>
+<li><p>Software de trabajo:</p>
+<ul>
+<li><p>R y Rstudio: Los análisis estadísticos corren mucho más rápido gracias a paquetes como OpenBlas, que optimiza la velociadad de cómputo. El cambio más dramático lo percibí en el renderizado a pdf o word usando Rmarkdown. De igual forma, las gráficas, y particularmente los mapas, son creados mucho más rápido (la velocidad de los mapas la pude comparar a partir de scripts que hice en Windows).</p></li>
+<li><p>Edición de imágenes: Mientras que en Windows utilizo Photoshop en Linux comencé a usar GIMP (<em>GNU Image Manipulation Program</em>). GIMP, al ser nativo de Linux, arranca y se ejecuta de manera fluida incluso con archivos de grandes dimensiones (un cartel de congreso de 1 m <span class="math inline">\(\times\)</span> 1.2 m).</p></li>
+<li><p>Edición de texto y hojas de cálculo: Desde que descubrí Rmarkdown para creación de textos he limitado mi uso de Word sólo para crear plantillas de formato. Cuando he tenido que hacer revisiones o modificaciones de textos, he usado desde FreeOffice, una suite de software análogo a Microsoft Office que permite crear archivos .docx, .xsls, y .pptx; permitiendo la colaboración con usuarios de Windows.</p></li>
+</ul></li>
+<li><p>Juegos: Si bien en Windows he podido correr juegos como Overwatch y Shadow of Mordor, la computadora se calentaba a niveles peligrosos. En Linux he estado jugando Robocraft a 60 fps sin riesgo de que se me tueste la laptop y sin exigirle demasiado a los ventiladores.</p></li>
+<li><p>Entorno gráfico: Uno de los aspectos que más valoro de Manjaro con el escritorio de Plasma KDE es la pletora de opciones para personalizar los cursores, íconos, colores, y temas de ventanas. Esta diversidad opaca a la limitada personalización que ofrece Windows (colores de ventanas, color del cursor, y el fondo de escritorio).</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="/run/media/gonzalo/Windows/Users/Gonzalo/Documents/Trabajos/Sitio%20web/mixcalco/escritorio.png" width="683" style="display: block; margin: auto;" /></p>
+</div>
+<h3 id="aspectos-a-tener-en-cuenta">Aspectos a tener en cuenta</h3>
+<p>Nada es perfecto, y antes de cambiar de Windows a Manjaro Linux es importante reconocer algunas características de Manjaro Linux:</p>
+<ul>
+<li><p>Actualizaciones constantes: Manjaro es un sistema <em>rolling release</em> lo que significa que los paquetes y bases del sistema constantemente son actualizadas. Si bien los usuarios deciden qué y cuándo actualizar su sistema, es posible que algunas actualizaciones grandes rompan el sistema.</p></li>
+<li><p>Errores en la configuración: Durante el proceso de instalación Calamares reconoce el hardware e instala los drivers adecuados sin ninguna complicación. No obstante hay ocasiones en que surgen errores y es necesario hacer modificaciones en la configuración desde la terminal, lo cual puede ser incómodo para algunos usuarios. A pesar de esto usualmente las respuestas ya se encuentran en los foros.</p></li>
+<li><p>Curva de aprendizaje: Manjaro es considerado como una distribución amigable para usuarios novatos. A pesar de esto, y vinculado con los puntos anteriores, el uso cotidiano sí requiere un grado de familiarización con la jerga, comandos básicos, y ubicaciones del sistema operativo.</p></li>
+</ul>
+<h2 id="consideraciones-finales">Consideraciones finales</h2>
+<p>Como un usuario de toda la vida de Windows la transición a Linux usando Manjaro ha sido rápida e indolora. La optimización del sistema gracias a los drivers comunitarios, la completa autonomía sobre cada uno de los aspectos del sistema, y la pletora de opciones de personalización han mejorado sustancialmente mi relación con mi computadora y han encendido una llama de interés por aprender más sobre linux; y en el proceso me han hecho más feliz. Es claro para mí que no pienso volver a usar Windows a menos que sea absolutamente necesario. No puedo más que recomendar que instalen en una usb la distribución de Linux que más les llame la atención o se ajuste a sus necesidades y que se atrevan a dar un salto de fe.</p>
+<p><br></p>
+<h2 id="lista-de-recursos">Lista de recursos</h2>
+<ul>
+<li><p>Página oficial de Majaro.</p></li>
+<li><p>Instalación e información sobre Manjaro.</p></li>
+<li><p>Razones por las cuáles elegir Manjaro sobre otras distribuciones.</p></li>
+<li></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
@@ -1495,6 +1548,15 @@ Figure 4: Logos de las distribuciones Linux Mint, Ubuntu, y Manjaro
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
