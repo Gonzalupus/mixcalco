@@ -6,40 +6,44 @@ author:
   - name: Gonzalo Martínez 
 date: 01-07-2021
 output:
-  distill::distill_article:
-    self_contained: false
+  distill::distill_article
 ---
 
 ```{r setup, include=FALSE}
 
 library(here)
 library(jpeg)
+library(png)
 
 knitr::opts_chunk$set(echo = FALSE, fig.align = 'center')
 
-
 ```
 
-¿Cuántas veces no has estado al borde del colapso nervioso porque windows se tarda años en abrir un programa, porque quiere actualizarse *justo* cuando ya te vas a dormir, o simplemente porque instala y reinstala programas que no quieres (coff coff Edge coff coff)? Como una de las millones de personas fastidiadas por estos y otros problemas con Windows es que decidí dar el salto de fe al mundo de Linux.
+¿Cuántas veces no has estado al borde del colapso nervioso porque windows tarda mucho en abrir un programa, porque quiere actualizarse justo cuando ya te vas a dormir, o simplemente porque instala y reinstala programas que no quieres (coff coff Edge coff coff)? Como una de las millones de personas fastidiadas por estos y otros problemas con Windows es que decidí dar el salto de fe al mundo de Linux.
 
 ## El inicio del fin
 
-Como muchos de los millenials urbanos y con acceso a una computadora, mi integración al mundo digital inició con Windows, y salvo por una breve experimentación con ubuntu en mi adolescencia, nunca había usado otro sistema operativo. Una de las razones por las que he estado confinado a Windows es que linux y sus múltiples distribuciones no son muy conocidas para lxs usuarios *casuales* (por hacer una analogía con la jerga gamer) en oposición a los usuarios con mayor experiencia, interés, o habilidad en informática. Otra razón es que, en la percepción de estos mismos usuarios, la idea de utilizar la computadora a través de algo que no sea una interfaz gráfica (o *Graphical User Interface* en inglés) produce un sudor de manos y poco interés. En mi caso nunca se me había ocurrido usar Linux porque sentía que no contaba con el conocimiento y la capacidad para configurar y usar un sistema operativo que requiriera algo más que unos cuantos clicks ¿Qué cambió entonces?
+Como muchos de los millenials urbanos y con acceso a una computadora, mi integración al mundo digital inició con Windows, y salvo por una breve y fallida experimentación con ubuntu en mi adolescencia, nunca había usado otro sistema operativo. Existen varias razones por las cuales los usuarios *casuales* (por hacer una analogía con la jerga gamer) no conocen o no se interesan por Linux:
 
-```{r, out.width='20%', fig.cap="¡Alerta de Spoiler!: En la más reciente película de Spiderman, Miles Morales descubre que lo que necesita para poder dominar sus habilidades es confiar en sí mismo y simplemente hacer las cosas."}
+* **Lin ¿qué?**: Linux y sus distribuciones no son muy conocidas para  en oposición a personas con mayor experiencia, interés, o habilidad en informática. 
 
-knitr::include_graphics(here('leap.jpg'))
+* **Disponibilidad de software**: Por la naturaleza libre de Linux, la gran mayoría de los programas son también software libre y algunos pueden no ser muy conocidos aunque se encuentren en Windows y MacOS. Particularmente problemático para la mayoría de los usuarios es la ausencia de programas del día a día como la suite de Microsoft Office (Word, Excel, Power Point, etc). No obstante es posible encontrar alternativas, y de hecho Manjaro da la opción de instalar [LibreOffice](https://es.libreoffice.org/) o [FreeOffice](https://www.freeoffice.com/es/) durante la instalación para que uno pueda trabajar sin problemas desde el inicio. 
+
+* **Uso de la terminal**: La idea de utilizar la computadora a través de algo que no sea una interfaz gráfica (o *Graphical User Interface* en inglés) puede producir sudor de manos y poco interés en mucho usuarios casuales. En mi caso nunca se me había ocurrido usar Linux porque sentía que no contaba con el conocimiento y la capacidad para configurar y usar un sistema operativo que requiriera algo más que unos cuantos clicks ¿Qué cambió entonces?
+
+```{r, fig.cap="¡Alerta de Spoiler!: En la más reciente película de Spiderman, Miles Morales descubre que lo que necesita para poder dominar sus habilidades es confiar en sí mismo y simplemente hacer las cosas."}
+
+knitr::include_graphics(here('images/leap.jpg'))
 
 ```
-
 
 Mi transición hacia el software libre ha sido gradual y poco perceptible. Los primeros pasos los di desde la academia cuando cursaba mis estudios de licenciatura en biología. Tanto en las ciencias biológicas como en las ciencias sociales la estadística no sólo ha sido fundamental en el desarrollo de sus métodos, sino también en la consolidación de algunas de sus ramas (como la ecología) como ciencias ante los ojos del otras disciplinas tales como la física o las matemáticas. Es por ello que uno de los cursos con más valor es el de bioestadística, en donde se nos introduce a la estadística y sus aplicaciones empleando programas con interfaces gráficas Stata o SPSS por un lado, y R por el otro. Incontables biólogas y biólogos han derramado sudor y lágrimas por verse obligados a usar R para sus clases o sus tesis; mientras que otros desarrollamos una variante de Síndrome de Estocolmo y le empezamos a agarrar el gusto a lidiar constantemente con errores (muchas veces triviales). Al ir desarrollando dicho síndrome también fui ganando habilidades para buscar soluciones a los problemas con mis análisis que me fueron útiles para otros programas y dispositivos. 
 
 Durante mis estudios de maestría comencé a conocer más sobre las implicaciones políticas de las licencias de software y los derechos de autor en la creación y distribución del conocimiento. Como muchos otros estudiantes a lo largo del mundo, yo no hubiese acceder a mucha de la literatura que consulté de no haber sido gracias a [Sci Hub](https://es.wikipedia.org/wiki/Sci-Hub) o la [Library Genesis](https://es.wikipedia.org/wiki/Library_Genesis). [Las declaraciones](https://custodians.online/spanish.html) de estas iniciativas encendieron mi interés y me dieron una razón más estructurada para transicionar hacia el software libre en la medida de lo posible.
 
-```{r, out.width='20%', fig.cap="En años pasados Elsevier, una de las editoriales científicas mñas poderosas demandó a Scie Hub por derechos de autor, obligando a su creadora a mudarse a Rusia."}
+```{r, fig.show='hold',fig.cap="En años pasados Elsevier, una de las editoriales científicas mñas poderosas demandó a Scie Hub por derechos de autor, obligando a su creadora a mudarse a Rusia."}
 
-knitr::include_graphics(here(c('sci-hub.jpg','elsevier.jpg')))
+knitr::include_graphics(c(here('images/sci-hub.jpg'),here('images/elsevier.jpg')))
 
 ```
 
@@ -48,10 +52,12 @@ knitr::include_graphics(here(c('sci-hub.jpg','elsevier.jpg')))
 A inicios del año pasado aproveché el encierro para investigar sobre Linux y explorar qué tan difícil en realidad era. Lo primero con lo que me topé fue con una asombrosa diversidad de [distribuciones](https://es.wikipedia.org/wiki/Anexo:Distribuciones_Linux) que existen, desde Linux Mint y Ubuntu hasta Red Hat y Arch linux. Como un potencial usuario novato y asustado, inicé buscando las distribuciones más populares y que requerían menos de la línea de comandospara configurar el sistema. Los resultados constriñeron la decisión a Linux Mint, Ubuntu, y Manjaro; siendo este último el ganador.
 
 
-```{r, fig.cap="Logos de las distribuciones Linux Mint, Ubuntu, y Manjaro"}
+```{r, fig.show='hold', fig.cap="Logos de las distribuciones Linux Mint, Ubuntu, y Manjaro"}
 
-knitr::include_graphics(c('Linux_Mint.png', 'ubuntu.png', 'manjaro.png'),
-                        path =  here(), auto_pdf = FALSE)
+knitr::include_graphics(c(here('images/Linux_Mint.png'),
+                        here('images/ubuntu.png'), 
+                        here('images/manjaro.png')))
+
 ```
 
 Mi decisión por usar Manjaro se debió a varios factores, entre los que destacan:
@@ -76,18 +82,18 @@ Hasta este momento mi experiencia con Manjaro ha sido más que buena; a continua
 
 ### Positivos
 
-* Arranque y apagado: En Windows el arranque puede tomar, desde que la enciendo hasta que inicio firefox u otro programa, unos 8 minutos en promedio. En Manjaro esto tarda unos 3 a 5 minutos máximo si dejo que el GRUB (el menú de inicio de Manjaro en donde te permite elegir el sistema operativo y el núcleo de Linux a usar) en automático.
+* Arranque y apagado: En Windows el arranque puede tomar, desde que la enciendo hasta que inicio firefox u otro programa, unos 8 minutos en promedio. En Manjaro esto tarda unos 2 minutos a lo más si dejo que el GRUB (el menú de inicio de Manjaro en donde te permite elegir el sistema operativo y el núcleo de Linux a usar) en automático.
 
 
 ```{r, fig.cap="En el GRUB puedes visualizar los sistemas operativos disponibles, y en el caso de Manjaro, el núcleo de Linux que quieres utilizar. Desde aquí también es posible cargar o 'bootear' algún sistema operativo desde una USB. Si sólo quieres usar Manjaro es posible configurar el arranque para que éste sea directo."}
 
-knitr::include_graphics(path = here('grub.png'))
+knitr::include_graphics(path = here('images/grub.png'))
 
 ```
 
 * Desempeño en general: 
 
-  + La apertura de programas, transferencias de archivos entre carpetas a medios externos, asì como la carga de varios libros en Okular es instantánea. 
+  + La apertura de programas, transferencias de archivos entre carpetas a medios externos, asì como la carga de varios libros en Okular(visualizador de pdf) es instantánea. 
   
   + La apertura de imágenes es más rápida que el visor de fotos o Xnview en Windows.
   
@@ -107,7 +113,7 @@ knitr::include_graphics(path = here('grub.png'))
   
 ```{r}
 
-knitr::include_graphics(here('escritorio.png'))
+knitr::include_graphics(here('images/escritorio.png'))
 
 ```
   
@@ -115,7 +121,7 @@ knitr::include_graphics(here('escritorio.png'))
 
 Nada es perfecto, y antes de cambiar de Windows a Manjaro Linux es importante reconocer algunas características de Manjaro Linux:
 
-* Actualizaciones constantes: Manjaro es un sistema *rolling release* lo que significa que los paquetes y bases del sistema constantemente son actualizadas. Si bien los usuarios deciden qué y cuándo actualizar su sistema, es posible que algunas actualizaciones grandes rompan el sistema.
+* Actualizaciones constantes: Manjaro es un sistema *rolling release* lo que significa que los paquetes y bases del sistema constantemente son actualizadas. Si bien los usuarios deciden qué y cuándo actualizar su sistema, es posible que algunas actualizaciones grandes rompan el sistema si los usuarios no revisan los cambios.
   
 * Errores en la configuración: Durante el proceso de instalación Calamares reconoce el hardware e instala los drivers adecuados sin ninguna complicación. No obstante hay ocasiones en que surgen errores y es necesario hacer modificaciones en la configuración desde la terminal, lo cual puede ser incómodo para algunos usuarios. A pesar de esto usualmente las respuestas ya se encuentran en los foros.
 
@@ -127,17 +133,25 @@ Como un usuario de toda la vida de Windows la transición a Linux usando Manjaro
 
 <br>
 
-
 ## Lista de recursos
 
-* Página oficial de Majaro.
+Información sobre distintas destribuciones de Linux actualizada: [Las 9 mejores distribuciones de Linux para principiantes](https://www.1000tipsinformaticos.com/2017/03/las-7-mejores-distribuciones-de-linux-para-novatos.html)
 
-* Instalación e información sobre Manjaro.
+Acá hay algunos recursos útiles para saber más sobre Manjaro y cómo instalarlo.
 
-* Razones por las cuáles elegir Manjaro sobre otras distribuciones.
+* [Información y guías de Manjaro desde su wiki](https://archived-wiki.manjaro.org/index.php?title=Portada)
 
-* 
+* [Más información en español](https://www.linuxenespañol.com/distribuciones/manjaro/)
 
+* [Razones por las cuáles elegir Manjaro sobre otras distribuciones](https://laboratoriolinux.es/index.php/-noticias-mundo-linux-/distribuciones/22276-15-razones-para-usar-manjaro.html).
+
+* [Cómo crear una usb booteable con Manjaro (en inglés)](https://linuxconfig.org/create-manjaro-linux-bootable-usb)
+
+* [Instalación dual de Manjaro y Windows 10](https://www.xataka.com/basics/como-instalar-linux-a-windows-10-ordenador)
+
+* [Instalación de Manjaro paso a paso](https://www.comoinstalarlinux.com/como-instalar-manjaro/)
+
+* [Toda la información de Manjaro, su instalación, y qué hacer después (en inglés)](https://itsfoss.com/manjaro-tutorials/)
 
 
 
