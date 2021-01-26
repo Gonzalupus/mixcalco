@@ -1,5 +1,6 @@
 name: "Mixcalco"
-title: "Mixcalco"
+title: "Ensayos"
+theme: tema.css
 output_dir: "docs"
 navbar:
   right:
@@ -7,6 +8,8 @@ navbar:
       href: index.html
     - text: "Acerca del sitio"
       href: about.html
+    - text: "CV"
+      href: Curriculum-vitae_eng.pdf
 collections: 
   posts: 
     categories: TRUE
