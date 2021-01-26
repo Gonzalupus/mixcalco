@@ -1,5 +1,5 @@
-name: "Mixcalco"
-title: "Ensayos"
+name: "Ensayos"
+title: "Mixcalco"
 theme: tema.css
 output_dir: "docs"
 navbar:
